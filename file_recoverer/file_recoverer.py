@@ -90,7 +90,7 @@ def main():
         sys.exit(0)
 
     # Check if the user wants to recover all files
-    if inode_input == "all" or inode_input == "ALL" or inode_input == "All:
+    if inode_input.lower() == "all":
         logger.debug("User chose to recover all files")
         recover_files(disk_image, file_list)
     else:
