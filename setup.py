@@ -6,14 +6,14 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='trch-file-recoverer',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     install_requires=[
         # List your dependencies here
     ],
     entry_points={
         'console_scripts': [
-            'recover-files=recover_files.recover_files:main',
+            'recover-files=file_recoverer.file_recoverer:main',
         ],
     },
     # NEW ADDITIONS BELOW
