@@ -1,6 +1,6 @@
 import os
 import subprocess
-from models.recoverable import Recoverable
+from .models.recoverable import Recoverable
 
 # Function to list recoverable files and their inode numbers
 def list_recoverable_files(disk_image):
