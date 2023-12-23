@@ -21,7 +21,7 @@ brew install sleuthkit
 To install this tool, you can use the following command:
 
 ```bash
-pip install file-recoverer
+pip install trch-file-recoverer
 ```
 
 ## Usage
