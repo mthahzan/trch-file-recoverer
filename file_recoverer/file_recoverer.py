@@ -2,7 +2,7 @@ import os
 import subprocess
 import logging
 
-from .models.recoverable import Recoverable
+from models.recoverable import Recoverable
 
 # Logger for the file recovery script
 logger = logging.getLogger(__name__)
@@ -51,6 +51,8 @@ def print_recoverables(recoverables):
         print("{:<10} {:<}".format(recoverable.inode, recoverable.name))
 
 def main():
+    import sys
+
     # Check if The Sleuth Kit is installed
     if not check_tsk_installed():
         logger.error("The Sleuth Kit is not installed. Exiting.")
@@ -58,7 +60,6 @@ def main():
         sys.exit(1)
 
     # Check if the script is run with the correct number of arguments
-    import sys
     if len(sys.argv) != 2:
         logger.error("Incorrect number of arguments provided. Exiting.")
         print("Usage: python recover_files.py <image_file>")
@@ -89,7 +90,7 @@ def main():
         sys.exit(0)
 
     # Check if the user wants to recover all files
-    if inode_input == "ALL":
+    if inode_input == "all" or inode_input == "ALL" or inode_input == "All:
         logger.debug("User chose to recover all files")
         recover_files(disk_image, file_list)
     else:
