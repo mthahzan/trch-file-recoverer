@@ -2,7 +2,7 @@ import os
 import subprocess
 import logging
 
-from models.recoverable import Recoverable
+from .models.recoverable import Recoverable
 
 # Logger for the file recovery script
 logger = logging.getLogger(__name__)
