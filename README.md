@@ -35,5 +35,5 @@ dd if=/dev/sda1 of=sda1.img
 Once you have created the image, you can run the tool as follows:
 
 ```bash
-file-recoverer sda1.img
+recover-files sda1.img
 ```
