@@ -53,7 +53,7 @@ def print_recoverables(recoverables):
 def main():
     # Check if The Sleuth Kit is installed
     if not check_tsk_installed():
-        logger.error("The Sleuth Kit is not installed. Exiting."")
+        logger.error("The Sleuth Kit is not installed. Exiting.")
         print("Error: The Sleuth Kit is not installed on your system. Please check README.md for installation instructions.")
         sys.exit(1)
 
