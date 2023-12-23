@@ -1,5 +1,6 @@
 import os
 import subprocess
+
 from .models.recoverable import Recoverable
 
 # Function to list recoverable files and their inode numbers
@@ -38,8 +39,7 @@ def print_recoverables(recoverables):
     for recoverable in recoverables:
         print("{:<10} {:<}".format(recoverable.inode, recoverable.name))
 
-# Main program
-if __name__ == "__main__":
+def main():
     # Check if The Sleuth Kit is installed
     if not check_tsk_installed():
         print("Error: The Sleuth Kit is not installed on your system.")
@@ -88,3 +88,7 @@ if __name__ == "__main__":
 
         # Recover the specified files
         recover_files(disk_image, recoverables_of_interest)
+
+# Main program
+if __name__ == "__main__":
+    main()
